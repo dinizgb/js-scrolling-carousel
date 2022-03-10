@@ -4,6 +4,8 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
+import Icon from '@mui/material/Icon';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 
 const Header = styled.header`
@@ -61,8 +63,8 @@ export default function Index() {
               <Grid item xs={6}>
                 <h1>Javascript Scrolling Carousel</h1>
               </Grid>
-              <Grid item xs={6} sx={{ textAlign: 'right', marginTop: 2 }}>
-                cc
+              <Grid item xs={6} sx={{ textAlign: 'right', marginTop: 2.5 }}>
+                <a href="https://github.com/dinizgb/js-scrolling-carousel" target="_blank"><GitHubIcon sx={{ fontSize: 35 }}/></a>
               </Grid>
             </Grid>
           </Box>
@@ -159,7 +161,7 @@ export default function Index() {
           <Box sx={{ width: '100%', marginBottom: 3 }}>
             <Grid container rowSpacing={1} spacing={2}>
               <Grid item xs={12}>
-                <p>This is an open source project, feel free to contribute <a href="https://github.com/dinizgb/js-scrolling-carousel">here</a>.</p>
+                <p>This is an open source project, feel free to contribute <a href="https://github.com/dinizgb/js-scrolling-carousel" target="_blank">here</a>.</p>
               </Grid>
             </Grid>
           </Box>

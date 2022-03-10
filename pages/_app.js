@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
   }
   a{
-    color: #00D982;
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
     -webkit-transition: 0.25s;
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     -ms-transition: 0.25s;
     transition: 0.25s;
     &:hover{
-      color: #19FFA3;
+      color: #00D982;
       -webkit-transition: 0.25s;
       -moz-transition: 0.25s;
       -o-transition: 0.25s;
