@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Head from "next/head";
 import Image from 'next/image';
@@ -7,7 +8,15 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
+import ScrollContainer from 'react-indiana-drag-scroll';
+
+const MenuSticky = styled.div`
+  width: 100%;
+  padding: 10px 0;
+  display: -moz-box;
+  display: -webkit-box;
+  top: 0;
+`;
 
 const Header = styled.header`
   margin-bottom: 20px;
@@ -30,6 +39,7 @@ const FacebookItem = styled.div`
   padding: 4px;
   cursor: pointer;
   border-radius: 8px;
+  position: relative;
   background: url('${(props) => `${props.img}`}');
   background-repeat: no-repeat;
   background-size: cover;
@@ -169,24 +179,24 @@ export default function Index() {
                 </h2>
               </Grid>
               <Grid item xs={12} id="removing_scroll_button">
-                <ScrollingCarousel>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-716658.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-813940.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-dominika-roseclay-2023384.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-godisable-jacob-965324.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-hasibullah-zhowandai-819530.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-jenna-hamra-1054422.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-762084.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-yuri-manei-2690323.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-konstantin-mishchenko-2896428.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-206434.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-262391.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-354951.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-415263.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-reead-886285.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-victor-miyata-1845534.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                      <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-vinicius-wiesehofer-1130624.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
-                </ScrollingCarousel>
+                <ScrollContainer component={MenuSticky}>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-716658.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-813940.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-dominika-roseclay-2023384.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-godisable-jacob-965324.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-hasibullah-zhowandai-819530.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-jenna-hamra-1054422.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-andrea-piacquadio-762084.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-yuri-manei-2690323.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-konstantin-mishchenko-2896428.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-206434.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-262391.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-354951.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-pixabay-415263.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-reead-886285.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-victor-miyata-1845534.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                  <InstagramItem><Avatar alt="Instagram Stories Item" src="/images/pexels-vinicius-wiesehofer-1130624.jpg" sx={{ width: 80, height: 80 }} /></InstagramItem>
+                </ScrollContainer>
               </Grid>
             </Grid>
             <Grid container rowSpacing={1} spacing={2} sx={{ marginTop: 2 }}>
@@ -196,50 +206,50 @@ export default function Index() {
                 </h2>
               </Grid>
               <Grid item xs={12} id="removing_scroll_button">
-                <ScrollingCarousel>
-                      <FacebookItem img={`/images/giphy1.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-716658.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-andrea-piacquadio-813940.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-813940.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-dominika-roseclay-2023384.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-dominika-roseclay-2023384.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy2.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-godisable-jacob-965324.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy3.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-hasibullah-zhowandai-819530.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-jenna-hamra-1054422.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-jenna-hamra-1054422.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy4.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-yuri-manei-2690323.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-andrea-piacquadio-762084.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-762084.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy5.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-262391.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-konstantin-mishchenko-2896428.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-konstantin-mishchenko-2896428.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy6.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-354951.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/pexels-pixabay-206434.jpg`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-206434.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy7.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-415263.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                      <FacebookItem img={`/images/giphy8.gif`}>
-                        <Avatar alt="Facebook Stories Avatar" src="/images/pexels-reead-886285.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
-                      </FacebookItem>
-                </ScrollingCarousel>
+                <ScrollContainer component={MenuSticky}>
+                  <FacebookItem img={`/images/giphy1.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-716658.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-andrea-piacquadio-813940.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-813940.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-dominika-roseclay-2023384.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-dominika-roseclay-2023384.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy2.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-godisable-jacob-965324.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy3.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-hasibullah-zhowandai-819530.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-jenna-hamra-1054422.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-jenna-hamra-1054422.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy4.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-yuri-manei-2690323.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-andrea-piacquadio-762084.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-andrea-piacquadio-762084.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy5.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-262391.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-konstantin-mishchenko-2896428.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-konstantin-mishchenko-2896428.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy6.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-354951.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/pexels-pixabay-206434.jpg`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-206434.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy7.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-pixabay-415263.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                  <FacebookItem img={`/images/giphy8.gif`}>
+                    <Avatar alt="Facebook Stories Avatar" src="/images/pexels-reead-886285.jpg" sx={{ width: 40, height: 40, marginTop: 1, marginLeft: 1 }} />  
+                  </FacebookItem>
+                </ScrollContainer>
               </Grid>
             </Grid>
             <Grid container rowSpacing={1} spacing={2} sx={{ marginTop: 2 }}>
@@ -249,19 +259,19 @@ export default function Index() {
                 </h2>
               </Grid>
               <Grid item xs={12} id="removing_scroll_button">
-                <ScrollingCarousel>
-                      <ChipsItem><Chip label="Homepage" component="a" href="#" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="Clone this project on Github" component="a" href="https://github.com/dinizgb/js-scrolling-carousel" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="React Carousel NPM Package" component="a" href="https://www.npmjs.com/package/@trendyol-js/react-carousel" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="Check my Medium Profile and Articles" component="a" href="https://medium.com/@gabriel.sdiniz" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="War on Ukraine" component="a" href="https://www.wsj.com/livecoverage/russia-ukraine-latest-news-2022-03-11" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="World News" component="a" href="https://www.theguardian.com/world/" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="Traversy Media Youtube Channel" component="a" href="https://www.youtube.com/c/TraversyMedia" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="MUI Library" component="a" href="https://mui.com/pt/getting-started/installation/" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="NextJS - The React Framework" component="a" href="https://nextjs.org/" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="Giphy - GIF Library" component="a" href="https://giphy.com/" variant="outlined" clickable/></ChipsItem>
-                      <ChipsItem><Chip label="Pexels - Image Library" component="a" href="https://www.pexels.com/" variant="outlined" clickable/></ChipsItem>
-                </ScrollingCarousel>
+                <ScrollContainer component={MenuSticky}>
+                  <ChipsItem><Chip label="Homepage" component="a" href="#" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="Clone this project on Github" component="a" href="https://github.com/dinizgb/js-scrolling-carousel" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="React Carousel NPM Package" component="a" href="https://www.npmjs.com/package/@trendyol-js/react-carousel" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="Check my Medium Profile and Articles" component="a" href="https://medium.com/@gabriel.sdiniz" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="War on Ukraine" component="a" href="https://www.wsj.com/livecoverage/russia-ukraine-latest-news-2022-03-11" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="World News" component="a" href="https://www.theguardian.com/world/" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="Traversy Media Youtube Channel" component="a" href="https://www.youtube.com/c/TraversyMedia" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="MUI Library" component="a" href="https://mui.com/pt/getting-started/installation/" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="NextJS - The React Framework" component="a" href="https://nextjs.org/" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="Giphy - GIF Library" component="a" href="https://giphy.com/" variant="outlined" clickable/></ChipsItem>
+                  <ChipsItem><Chip label="Pexels - Image Library" component="a" href="https://www.pexels.com/" variant="outlined" clickable/></ChipsItem>
+                </ScrollContainer>
               </Grid>
             </Grid>
             <Grid container rowSpacing={1} spacing={2} sx={{ marginTop: 2 }}>
@@ -271,7 +281,7 @@ export default function Index() {
                 </h2>
               </Grid>
               <Grid item xs={12} id="removing_scroll_button">
-                <ScrollingCarousel>
+                <ScrollContainer component={MenuSticky}>
                   <NewsItem>
                     <NewsItemImage>
                       <Image
@@ -515,7 +525,7 @@ export default function Index() {
                       </NewsItemDateArea>
                     </NewsItemBodyArea>
                   </NewsItem>
-                </ScrollingCarousel>
+                </ScrollContainer>
               </Grid>
             </Grid>
           </Box>
