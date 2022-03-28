@@ -47,6 +47,9 @@ const theme = {
     primary: '#0070f3',
     secondary: '#242526',
     primary_text: '#fff',
+    dark_text: '#111',
+    light_text: '#666',
+    dark_bg: '#18191A',
   },
 }
 
